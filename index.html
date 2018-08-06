@@ -10,10 +10,13 @@
 </head>
 
 <body>
-    <img src="https://dealer.sprint.com/media/1736/sprint_nextel_logosvg_white.png?width=700&mode=max" alt="">
+    <div class="header">
+        <img src="https://dealer.sprint.com/media/1736/sprint_nextel_logosvg_white.png?width=700&mode=max" alt="">
+    </div>
     <form action="" id="sprintQuote" onsubmit="return false;">
         <fieldset>
-            <legend>Sprint Price Quote</legend>
+            <legend>
+                <span class="highlight">Sprint</span> Price Quote</legend>
             <label>Service Plan:</label>
             <br>
             <input type="radio" name="selectedPlan" value="unlimitedPlus" onclick="calculateTotal()" /> Unlimited Plus - $75

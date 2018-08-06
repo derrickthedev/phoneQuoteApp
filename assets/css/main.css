@@ -1,7 +1,45 @@
 body {
-  background: darkgray;
+  background: #141414;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: #0d0d0d;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ffdd05;
 }
 
 img {
-  width: 250px;
+  width: 200px;
+}
+
+form {
+  margin: 10px auto 20px auto;
+  color: #ddd;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+legend {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+label {
+  font-size: 22px;
+}
+
+input {
+  cursor: pointer;
+}
+
+fieldset {
+  border: 1px solid #ffdd05;
+  border-radius: 15px;
+}
+
+.highlight {
+  color: #ffdd05;
 }
