@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Sprint Plan and Phone Price Quote</title>
+</head>
+
+<body>
+    <img src="https://dealer.sprint.com/media/1736/sprint_nextel_logosvg_white.png?width=700&mode=max" alt="">
+    <form action="" id="sprintQuote" onsubmit="return false;">
+        <fieldset>
+            <legend>Sprint Price Quote</legend>
+            <label>Service Plan:</label>
+            <br>
+            <input type="radio" name="selectedPlan" value="unlimitedPlus" onclick="calculateTotal()" /> Unlimited Plus - $75
+            <br>
+            <input type="radio" name="selectedPlan" value="unlimitedBasic" onclick="calculateTotal()" /> Unlimited Basic - $65
+            <br>
+            <input type="radio" name="selectedPlan" value="unlimitedBYOD" onclick="calculateTotal()" /> Unlimited BYOD - $65
+            <br>
+            <input type="radio" name="selectedPlan" value="unlimitedMilitary" onclick="calculateTotal()" /> Unlimited Military - $65
+            <br>
+            <p>
+                <label for='autopay' class="inlinelabel">AutoPay:</label>
+                <br>
+                <input type="checkbox" id="autopay" name='autopay' onclick="calculateTotal()" /> (-$5 per line)
+            </p>
+
+            <label>Phone:</label>
+            <br>
+            <select id="phone" name='phone' onchange="calculateTotal()">
+                <option value="none">Select Phone</option>
+                <optgroup label="iPhones">
+                    <option value="iphoneX">iPhone X - $41.67/mo</option>
+                    <option value="iphone8Plus">iPhone 8 Plus - $33.34/mo</option>
+                    <option value="iphone8">iPhone 8 - $29.17/mo</option>
+                    <option value="iphone7Plus">iPhone 7 Plus - $27.92/mo</option>
+                    <option value="iphone7">iPhone 7 - $22.92/mo</option>
+                    <option value="iphoneSE">iPhone SE - $14.58/mo</option>
+                </optgroup>
+                <optgroup label="Samsung Phones">
+                    <option value="note8">Note 8 - $40/mo</option>
+                    <option value="s9Plus">Galaxy S9+ - $38/mo</option>
+                    <option value="s9">Galaxy S9 - $33/mo</option>
+                    <option value="s8">Galaxy S8 - $28/mo</option>
+                    <option value="gJ7">Galaxy J7 - $12/mo</option>
+                    <option value="gJ3">Galaxy J3 - $8/mo</option>
+                </optgroup>
+                <optgroup label="LG Phones">
+                    <option value="lgV30Plus">LG V30+ - $38/mo</option>
+                    <option value="lgG7">LG G7 ThinQ - $33/mo</option>
+                    <option value="lgStylo4">LG Stylo 4 - $11/mo</option>
+                    <option value="lgStylo3">LG Stylo 3 - $10/mo</option>
+                    <option value="lgTribute">LG Tribute Dynasty - $4/mo</option>
+                </optgroup>
+                <optgroup label="Motorola Phones">
+                    <option value="motoZ2Force">Motorola Z2 Force - $33/mo</option>
+                    <option value="motoE5Plus">Motorola E5 Plus - $12/mo</option>
+                </optgroup>
+                <optgroup label="Other Phones">
+                    <option value="duraXTP">Kyocera Dura XTP - $11/mo</option>
+                    <option value="goFlip">Alcatel GoFlip - $4/mo</option>
+
+                </optgroup>
+            </select>
+            <br>
+            <br>
+            <label>Equipment Protection:</label>
+            <br>
+            <input type="radio" name="selectedTEP" value="none" onclick="calculateTotal()" /> None
+            <input type="radio" name="selectedTEP" value="tepMax" onclick="calculateTotal()" /> TEP Max
+            <input type="radio" name="selectedTEP" value="tepPlus" onclick="calculateTotal()" /> TEP Plus
+            <input type="radio" name="selectedTEP" value="tepBasic" onclick="calculateTotal()" /> TEP Basic
+            <br>
+            <br>
+            <div id="totalPrice"></div>
+
+        </fieldset>
+    </form>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
