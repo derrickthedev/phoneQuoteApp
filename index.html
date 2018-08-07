@@ -16,7 +16,13 @@
     <form action="" id="sprintQuote" onsubmit="return false;">
         <fieldset>
             <legend>
-                <span class="highlight">Sprint</span> Price Quote</legend>
+                <span class="highlight">Sprint</span> Price Quote
+            </legend>
+            <label>Number of Lines:</label>
+            <br>
+            <input type="number" name="numberOfLines" value="1" min="1" max="5" onchange="getNumberOfLines()" />
+            <br>
+            <br>
             <label>Service Plan:</label>
             <br>
             <input type="radio" name="selectedPlan" value="unlimitedPlus" onclick="calculateTotal()" /> Unlimited Plus - $75
@@ -27,12 +33,7 @@
             <br>
             <input type="radio" name="selectedPlan" value="unlimitedMilitary" onclick="calculateTotal()" /> Unlimited Military - $65
             <br>
-            <p>
-                <label for='autopay' class="inlinelabel">AutoPay:</label>
-                <br>
-                <input type="checkbox" id="autopay" name='autopay' onclick="calculateTotal()" /> (-$5 per line)
-            </p>
-
+            <br>
             <label>Phone:</label>
             <br>
             <select id="phone" name='phone' onchange="calculateTotal()">
@@ -79,7 +80,11 @@
             <input type="radio" name="selectedTEP" value="tepPlus" onclick="calculateTotal()" /> TEP Plus
             <input type="radio" name="selectedTEP" value="tepBasic" onclick="calculateTotal()" /> TEP Basic
             <br>
-            <br>
+            <p>
+                <label for='autopay' class="inlinelabel">AutoPay:</label>
+                <br>
+                <input type="checkbox" id="autopay" name='autopay' onclick="calculateTotal()" /> (-$5 per line)
+            </p>
             <div id="totalPrice"></div>
 
         </fieldset>

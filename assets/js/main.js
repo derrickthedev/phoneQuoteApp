@@ -1,3 +1,10 @@
+// Add Hidden Form For Upto 5 Lines
+// Reveal The Same Number Of Forms As The Quantity Input Value 2-5
+// Add Multi-Line Quote
+// Add Tax Caluculation
+// Add Hidden Description For Plan Details And Reveal On Selection
+
+// Realtime Price Update
 // http://javascript-coder.com/javascript-form/javascript-calculator-script.phtml
 
 const theForm = document.forms["sprintQuote"];

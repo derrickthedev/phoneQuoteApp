@@ -20,6 +20,7 @@ form {
   color: #ddd;
   max-width: 400px;
   min-width: 400px;
+  overflow: auto;
 }
 
 legend {
@@ -33,6 +34,10 @@ label {
 
 input {
   cursor: pointer;
+}
+
+input[name="numberOfLines"] {
+  width: 30px;
 }
 
 fieldset {
